@@ -1,0 +1,85 @@
+.player {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 400px;
+    width: 500px;
+    background-color: rgb(29, 29, 29);
+    padding: 20px;
+    border-radius: 16px;
+    color: lightgrey;
+    border: 2px solid black;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 5s;
+    transform: translateX(150%);
+    left: unset;
+
+    .icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &.shrink-player {
+        height: 65px;
+        iframe {
+            display: none;
+        }
+    }
+
+    h4 {
+        margin-bottom: 10px;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    i {
+        color: chartreuse;
+        cursor: pointer;
+    }
+
+    &.show {
+        animation: moveIn 0.4s ease-in-out;
+        transform: translateX(0);
+    }
+
+    &.noshow {
+        animation: moveOut 0.4s ease-in-out;
+        transform: translateX(150%);
+    }
+}
+
+@keyframes moveOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .player {
+        right: 5px;
+        left: 5px;
+        height: 60%;
+        width: unset;
+
+    }
+}

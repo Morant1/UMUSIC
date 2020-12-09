@@ -1,0 +1,139 @@
+.navbar {
+    padding: 20px 10px;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: 165px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: black;
+    font-size: 1.3rem;
+    color: lightgrey;
+    top: 0;
+    font-family: "Montserrat";
+
+    ul {
+        width: 100%;
+    }
+
+    .main-logo {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        h1 {
+            font-size: 1.5rem;
+            margin-left: 5px;
+            color: white;
+        }
+    }
+
+    input.nameInput {
+        width: 155px;
+    }
+
+    .router-link-active {
+        color: chartreuse;
+    }
+
+    .noActive {
+        color: lightgrey;
+        &:hover {
+            color: white;
+        }
+    }
+
+    i.logo {
+        color: chartreuse;
+        font-size: 1.8rem;
+        padding: 10px;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+    }
+    li.playlist {
+        position: relative;
+        .change {
+            right: -23px;
+            font-size: 0.6rem;
+            position: absolute;
+            background-color: #333333;
+            cursor: pointer;
+            color: lightgrey;
+            top: -23px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+
+        i.edit {
+            display: none;
+        }
+        &:hover {
+            i.edit {
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: -3px;
+                color: lavender;
+            }
+        }
+    }
+
+    i.edit {
+        position: relative;
+        top: -24px;
+        right: -87px;
+        display: none;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 0.6rem;
+    }
+
+    li {
+        padding: 10px 0;
+        font-size: 0.9rem;
+        width: 160px;
+        font-weight: bold;
+        i {
+            margin-right: 2px;
+        }
+
+        &:hover {
+            i.edit {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        padding: 20px 10px;
+        width: 128px;
+
+        li {
+            padding: 8px 0;
+            font-size: 0.7rem;
+            width: 100%;
+            i {
+                margin-right: 0px;
+            }
+        }
+
+        .main-logo {
+            flex-direction: column-reverse;
+            h1 {
+                font-size: 1.3rem;
+                margin-left: 0;
+                color: white;
+                margin-top: 5px;
+            }
+        }
+        input.nameInput {
+            width: 120px;
+        }
+    }
+}

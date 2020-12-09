@@ -1,0 +1,52 @@
+@import './cmps/videoList';
+@import './cmps/videoPreview';
+@import './cmps/videoPlayer';
+@import './cmps/videoFilter';
+@import './cmps/navBar';
+@import './views/mainApp.scss';
+
+
+
+
+body {
+    background-color: rgb(25,23,23);
+    overflow-x:hidden;
+    
+}
+
+* {
+    padding:0;
+    margin:0;
+    font-family: Montserrat,sans-serif ;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color:lightgray;
+    &:hover {
+        color:inherit;
+    }
+}
+
+
+
+
+@font-face {
+    font-family: Caveat;
+    src: url('~@/assets/fonts/Caveat/Caveat-Regular.ttf');
+}
+@font-face {
+    font-family: Montserrat;
+    src: url('~@/assets/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: Ubunto;
+    src: url('~@/assets/fonts/Ubuntu/Ubuntu-Regular.ttf');
+
+}
+

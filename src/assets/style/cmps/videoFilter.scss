@@ -1,0 +1,74 @@
+#content {
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    height: 50px;
+    top: 6%;
+    left: 203px;
+
+    i {
+        position: absolute;
+        left: 80%;
+        color: #ffffff57;
+        top: 10px;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+.filter-container input {
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 28px;
+    background-color: black;
+    color: chartreuse;
+    font-size: 0.8rem;
+    font-weight: 400;
+    outline: 0;
+    right:unset;
+
+    font-family: Montserrat, sans-serif;
+
+    &::placeholder {
+        color: inherit;
+        font-size: inherit;
+        font-family: Montserrat, sans-serif;
+    }
+}
+
+
+
+
+
+
+.square {
+    padding: 0 50px 0 15px;
+    width: 200px;
+    height: 50px;
+    background: black;
+    font-weight: 400;
+    outline: 0;
+}
+
+@media screen and (max-width: 500px) {
+    #content {
+        left: 162px;
+        right: 15px;
+    }
+
+    .filter-container input {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .filter-container input {
+        &::placeholder {
+            font-size: 0.65rem;
+        }
+    }
+    .square {
+        padding: 0 30px 0 15px;
+    }
+}
